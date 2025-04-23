@@ -185,7 +185,6 @@ h1 {
     color: #ffffff;
 }
 
-/* Using a custom attribute for variability */
 .ball:nth-child(1) {
     top: 77%;
     left: 88%;
