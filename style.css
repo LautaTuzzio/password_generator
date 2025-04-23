@@ -1,0 +1,260 @@
+
+@font-face {
+    font-family: "Comic";
+    src: url("./font/Comic.ttf") format("truetype");
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+    font-family: Comic;
+    height: 100vh;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "clouds";
+    src: url("./font/Clouds.otf") format("opentype");
+}
+
+.contenedor {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    height: fit-content;
+    max-width: 400px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 1);
+    opacity: 0;
+    transform: translateY(100px);
+    animation: intro 0.5s ease-in-out forwards;
+}
+
+.output {
+    margin-bottom: 20px;
+    animation: intro 0.5s ease-in-out forwards;
+    animation-delay: 0.1s;
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+#claveGenerada {
+    width: 70%;
+    font-family: Comic;
+    letter-spacing: 2px;
+    font-size: 1em;
+    padding: 8px;
+}
+
+button {
+    background-color: #497de9;
+    font-family: Comic;
+    letter-spacing: 2px;
+    border: none;
+    padding: 10px;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3 ease;
+}
+
+#generar {
+    animation: intro 0.5s ease-in-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+button:hover {
+    background-color: #3c6ed0;
+}
+
+.config {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    flex-direction: column;
+    margin: 20px 0;
+    animation: intro 0.5s ease-in-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+input[type="range"] {
+    width: 200px;
+}
+
+input[type="text"]{
+    border: none;
+    height: 20px;
+    border-radius: 6px;
+    transition: 0.2s;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+input[type="text"]:hover{
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+::placeholder{
+    text-align: center;
+    font-family: Comic;
+    letter-spacing: 2px;
+
+}
+
+h1 {
+    font-family: "clouds";
+    letter-spacing: 2px;
+    transform: scale(0px);
+    animation: bop 0.5s ease-in-out forwards;
+    animation-delay: 0.7s;
+}
+
+
+@keyframes intro {
+    form {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes bop {
+    0% {
+        transform: scale(0px);
+    }
+
+    50% {
+        transform: scale(120%);
+    }
+
+    80% {
+        transform: scale(80%);
+    }
+
+    100% {
+        transform: scale(100%);
+    }
+
+}
+
+@keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #4CB8B6;
+    overflow: hidden;
+}
+
+.ball {
+    position: absolute;
+    width: 20vmin;
+    height: 20vmin;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    animation: move linear infinite;
+}
+
+.ball:nth-child(odd) {
+    color: #fdfdfd;
+}
+
+.ball:nth-child(even) {
+    color: #ffffff;
+}
+
+/* Using a custom attribute for variability */
+.ball:nth-child(1) {
+    top: 77%;
+    left: 88%;
+    animation-duration: 40s;
+    animation-delay: -3s;
+    transform-origin: 16vw -2vh;
+    box-shadow: 40vmin 0 5.703076368487546vmin currentColor;
+}
+
+.ball:nth-child(2) {
+    top: 42%;
+    left: 2%;
+    animation-duration: 53s;
+    animation-delay: -29s;
+    transform-origin: -19vw 21vh;
+    box-shadow: -40vmin 0 5.17594621519026vmin currentColor;
+}
+
+.ball:nth-child(3) {
+    top: 28%;
+    left: 18%;
+    animation-duration: 49s;
+    animation-delay: -8s;
+    transform-origin: -22vw 3vh;
+    box-shadow: 40vmin 0 5.248179047256236vmin currentColor;
+}
+
+.ball:nth-child(4) {
+    top: 50%;
+    left: 79%;
+    animation-duration: 26s;
+    animation-delay: -21s;
+    transform-origin: -17vw -6vh;
+    box-shadow: 40vmin 0 5.279749632220298vmin currentColor;
+}
+
+.ball:nth-child(5) {
+    top: 46%;
+    left: 15%;
+    animation-duration: 36s;
+    animation-delay: -40s;
+    transform-origin: 4vw 0vh;
+    box-shadow: -40vmin 0 5.964309466052033vmin currentColor;
+}
+
+.ball:nth-child(6) {
+    top: 77%;
+    left: 16%;
+    animation-duration: 31s;
+    animation-delay: -10s;
+    transform-origin: 18vw 4vh;
+    box-shadow: 40vmin 0 5.178483653434181vmin currentColor;
+}
+
+.ball:nth-child(7) {
+    top: 22%;
+    left: 17%;
+    animation-duration: 55s;
+    animation-delay: -6s;
+    transform-origin: 1vw -23vh;
+    box-shadow: -40vmin 0 5.703026794398318vmin currentColor;
+}
+
+.ball:nth-child(8) {
+    top: 41%;
+    left: 47%;
+    animation-duration: 43s;
+    animation-delay: -28s;
+    transform-origin: 25vw -3vh;
+    box-shadow: 40vmin 0 5.196265905749415vmin currentColor;
+}
