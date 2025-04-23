@@ -18,7 +18,9 @@ document.getElementById("copiar").addEventListener("click", () => {
     const campo = document.getElementById("claveGenerada");
     campo.select();
     document.execCommand("copy");
-    alert("¡Clave copiada al portapapeles!");
+    var x = document.getElementById("snackbar")
+    x.className = "show"
+    setTimeout(function(){ x.className = x.className.replace("show", "") }, 3000)
 });
 document.getElementById("tam").addEventListener("input", (e) => {
     document.getElementById("tamValor").textContent = e.target.value;
